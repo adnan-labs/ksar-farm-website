@@ -1,0 +1,198 @@
+/* =============================================
+   HEADER STYLES
+   Place this in: src/components/Header.css
+   ============================================= */
+
+.ksar-header {
+  background: var(--ksar-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 0;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+/* ============ LOGO ============ */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ksar-forest);
+  letter-spacing: 1px;
+}
+
+/* ============ NAVIGATION ============ */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ksar-dark);
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: var(--ksar-gold);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--ksar-gold);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.nav-cta {
+  background: var(--ksar-gold);
+  color: var(--ksar-dark);
+  padding: 10px 20px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.nav-cta:hover {
+  color: var(--ksar-gold);
+  background: transparent;
+}
+
+.nav-cta::after {
+  display: none;
+}
+
+/* ============ MOBILE MENU TOGGLE ============ */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--ksar-dark);
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.25s ease;
+}
+
+.menu-toggle:hover {
+  color: var(--ksar-gold);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .ksar-header {
+    padding: 12px 0;
+  }
+
+  .header-wrapper {
+    padding: 12px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--ksar-white);
+    gap: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+    margin-top: 8px;
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px 24px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-cta {
+    border-radius: 0;
+    margin: 8px 16px;
+    width: auto;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .header-logo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    display: none;
+  }
+
+  .header-logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
