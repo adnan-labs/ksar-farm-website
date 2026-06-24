@@ -1,16 +1,11 @@
-/* =============================================
-   FIXED HEADER COMPONENT
-   Place this in: src/components/Header.js
-   ============================================= */
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import logo from '../assets/images/logo.png.jpeg';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Close menu when link is clicked
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -19,14 +14,20 @@ function Header() {
     <header className="ksar-header">
       <div className="ksar-container">
         <div className="header-wrapper">
+
           {/* Logo - Link to Home */}
           <Link to="/" className="header-logo" onClick={closeMenu}>
-            <img src="/logo.png" alt="KSAR Farms Logo" onError={(e) => {e.target.style.display='none'}} />
-            <span className="logo-text">KSAR Farms</span>
+            <img
+              src={logo}
+              alt="KSAR Farms Logo"
+              style={{ height: '60px', width: 'auto' }}
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+             <span className="logo-text">KSAR Farm</span>
           </Link>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="menu-toggle"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
@@ -45,6 +46,7 @@ function Header() {
               📞 Book Now
             </a>
           </nav>
+
         </div>
       </div>
     </header>

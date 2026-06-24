@@ -17,7 +17,7 @@ function Home() {
           <span className="ksar-eyebrow">Welcome to Paradise</span>
           <h1 className="ksar-h1">Escape to Nature. Farm. Relax.</h1>
           <p className="ksar-lead" style={{ color: 'rgba(255,255,255,0.9)', marginTop: '24px' }}>
-            92 km from Mumbai • 29 acres • 32+ Waterfalls • Organic Farm • Swimming Pools
+            92 km from Mumbai • 29 acres • 32+ Waterfalls • Organic Farm • Swimming Pool
           </p>
           <div style={{ marginTop: '32px', display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="tel:+919867610525" className="ksar-btn ksar-btn-outline">
@@ -97,7 +97,7 @@ function Home() {
 
           <div className="ksar-grid-3">
             {[
-              { icon: '🏊‍♂️', title: 'Swimming Pools', desc: 'Private pool, kids mini pool, and 3 lakh litre agri pool' },
+              { icon: '🏊‍♂️', title: 'Swimming Pool', desc: 'Private pool, kids mini pool, and 3 lakh litre agri pool' },
               { icon: '🌾', title: 'Organic Farm', desc: 'Walk through 2 acres of mangoes, cashews, and seasonal vegetables' },
               { icon: '⛺', title: 'Camping Zone', desc: 'Experience nature under stars with 10-guest capacity' },
               { icon: '🔥', title: 'BBQ & Bonfire', desc: 'Live BBQ dinners and cozy bonfires every evening' },
